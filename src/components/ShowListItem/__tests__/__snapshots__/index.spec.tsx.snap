@@ -1,27 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie renders correctly 1`] = `
+exports[`ShowListitem renders correctly 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "flexDirection": "row",
+      "opacity": 1,
     }
   }
 >
-  <Image
-    source={
-      Object {
-        "uri": "https://via.placeholder.com/150",
-      }
-    }
+  <View
     style={
       Object {
+        "borderRadius": 4,
         "height": 147,
         "marginRight": 12,
         "width": 105,
       }
     }
-  />
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://via.placeholder.com/150",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 4,
+          "height": 147,
+          "width": 105,
+        }
+      }
+    />
+  </View>
   <View
     style={
       Object {
@@ -40,17 +61,28 @@ exports[`Movie renders correctly 1`] = `
     >
       Test Movie
     </Text>
-    <Text
+    <View
       style={
         Object {
-          "fontSize": 20,
-          "fontWeight": "700",
+          "alignItems": "center",
+          "flexDirection": "row",
           "marginBottom": 12,
         }
       }
     >
-      8
-    </Text>
+      <Text />
+      <Text
+        style={
+          Object {
+            "fontSize": 20,
+            "fontWeight": "700",
+            "marginLeft": 8,
+          }
+        }
+      >
+        8
+      </Text>
+    </View>
     <View
       style={
         Object {

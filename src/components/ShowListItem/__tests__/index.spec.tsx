@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import MovieListItem from '..';
 
-const movieMock: any = {
+const showMock: any = {
   name: 'Test Movie',
   rating: {
     average: 8.0,
@@ -13,9 +13,9 @@ const movieMock: any = {
   genres: ['Test'],
 };
 
-describe('Movie', () => {
+describe('ShowListitem', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<MovieListItem movie={movieMock} />).toJSON();
+    const tree = renderer.create(<MovieListItem show={showMock} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
