@@ -1,8 +1,13 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
-import { ISearchedShow, IShow } from '../../interface/shows';
+import { FlatList, View, StyleSheet } from 'react-native';
 import ShowListItem from '../ShowListItem';
 import { IShowList } from './interface';
+
+const styles = StyleSheet.create({
+  itemContainer: {
+    paddingVertical: 8,
+  },
+});
 
 const ShowList = ({ shows, onEndReached, onMoviePress }: IShowList) => {
   if (shows && shows.length > 0) {
@@ -11,7 +16,7 @@ const ShowList = ({ shows, onEndReached, onMoviePress }: IShowList) => {
         data={shows}
         renderItem={({ item }) => {
           return (
-            <View style={{ paddingVertical: 8 }}>
+            <View style={styles.itemContainer}>
               <ShowListItem show={item} onPress={onMoviePress} />
             </View>
           );

@@ -1,5 +1,11 @@
 import React from 'react';
 import { Image, View, StyleSheet, Text } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import {
+  DARK_QUANTUM_BLUE,
+  GRAY,
+  POSTER_PLACEHOLDER_COLOR,
+} from '../../constants/styles/colors';
 import { IPoster } from './interface';
 
 const styles = StyleSheet.create({
@@ -16,14 +22,16 @@ const styles = StyleSheet.create({
   posterPlaceholder: {
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#CECECE',
+    backgroundColor: POSTER_PLACEHOLDER_COLOR,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 4,
   },
   posterPlaceholderText: {
     fontSize: 24,
     fontWeight: '700',
     textAlign: 'center',
+    color: GRAY,
   },
 });
 
@@ -33,7 +41,11 @@ const Poster = ({ source, size = 'small', style }: IPoster) => (
       <Image source={{ uri: source }} style={styles[size]} />
     ) : (
       <View style={styles.posterPlaceholder}>
-        <Text style={styles.posterPlaceholderText}>N/A</Text>
+        <MaterialIcons
+          name='image-not-supported'
+          size={60}
+          color={DARK_QUANTUM_BLUE}
+        />
       </View>
     )}
   </View>

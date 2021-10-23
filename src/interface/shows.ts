@@ -17,6 +17,11 @@ export interface IEpisode {
   rating: IRating;
 }
 
+export interface ISchedule {
+  time?: string;
+  days?: string[];
+}
+
 export interface IShow {
   id: number;
   url: string;
@@ -29,10 +34,7 @@ export interface IShow {
   rating: IRating;
   image: IShowImage;
   summary: string;
-  schedule: {
-    time: string;
-    days: string[];
-  };
+  schedule: ISchedule;
   _embedded: {
     episodes: IEpisode[];
   };

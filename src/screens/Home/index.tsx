@@ -16,10 +16,12 @@ import { fetchService } from '../../utils/fetch';
 import ShowList from '../../components/ShowList';
 import { THomeScreenProps } from './interface';
 import { handleSearchResults } from '../../utils/search';
+import { APP_BACKGROUND_COLOR } from '../../constants/styles/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: APP_BACKGROUND_COLOR,
   },
   header: {
     marginTop: StatusBar.currentHeight,
@@ -66,7 +68,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
           <SearchBar
             search={search}
             onChangeText={(value: string) => setSearch(value)}
-            placeholder='Search'
+            placeholder='Show name'
             buttonText={buttonText}
             onButtonPress={onSearchPress}
           />

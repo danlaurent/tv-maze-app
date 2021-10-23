@@ -2,6 +2,12 @@ import React from 'react';
 import { TextInput, StyleSheet, View, SafeAreaView } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { ISearchInput } from './interface';
+import {
+  DARK_QUANTUM_BLUE,
+  GRAY,
+  LIGHT_GRAY,
+  QUANTUM_BLUE,
+} from '../../constants/styles/colors';
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -11,20 +17,24 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: QUANTUM_BLUE,
+    borderColor: DARK_QUANTUM_BLUE,
   },
   input: {
     marginLeft: 12,
+    color: 'white',
   },
 });
 
 const SearchInput = ({ value, onChangeText, placeholder }: ISearchInput) => (
   <View style={styles.inputContainer}>
-    <FontAwesome5 name='search' size={24} color='black' />
+    <FontAwesome5 name='search' size={24} color={LIGHT_GRAY} />
     <TextInput
       style={styles.input}
       onChangeText={onChangeText}
       value={value}
       placeholder={placeholder}
+      placeholderTextColor={GRAY}
     />
   </View>
 );

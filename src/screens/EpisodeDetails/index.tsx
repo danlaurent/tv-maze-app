@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
+import DetailsMainInfo from '../../components/DetailsMainInfo';
 import Header from '../../components/Header';
+import Summary from '../../components/Summary';
 import { TEpisodeDetailsScreenProps } from './interface';
 
 const screen = Dimensions.get('window');
@@ -12,16 +14,6 @@ const styles = StyleSheet.create({
   },
   body: {
     padding: 20,
-  },
-  episodeName: {
-    fontSize: 24,
-    fontWeight: '700',
-    textAlign: 'center',
-  },
-  episodeDetails: {
-    fontSize: 16,
-    fontWeight: '500',
-    textAlign: 'center',
   },
 });
 
@@ -35,22 +27,24 @@ const EpisodeDetailsScreen = ({
   return (
     <View style={{ flex: 1 }}>
       <Header onBackPress={() => navigation.goBack()} />
-      <View style={styles.mainInfoContainer}>
-        <Image
-          source={{ uri: episode.image?.original }}
-          style={{ width: screen.width, aspectRatio: 3 / 2 }}
-        />
-        <View style={styles.body}>
-          <Text style={styles.episodeName}>{episode.name}</Text>
-          <Text style={styles.episodeDetails}>
-            Season {episode.season} | Episode {episode.number}
-          </Text>
-          <Text style={styles.episodeDetails}>{episode.rating.average}</Text>
+      <ScrollView>
+        <View style={styles.mainInfoContainer}>
+          <Image
+            source={{ uri: episode.image?.original }}
+            style={{ width: screen.width, aspectRatio: 3 / 2 }}
+          />
+          <View style={styles.body}>
+            <DetailsMainInfo
+              title={episode.name}
+              subtitle={`Season ${episode.season} | Episode ${episode.number}`}
+              rating={episode.rating.average}
+            />
+          </View>
         </View>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.episodeDetails}>{episode.summary}</Text>
-      </View>
+        <View style={styles.body}>
+          <Summary summary={episode.summary} />
+        </View>
+      </ScrollView>
     </View>
   );
 };

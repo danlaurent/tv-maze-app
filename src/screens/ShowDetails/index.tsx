@@ -3,17 +3,25 @@ import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 import { TShowDetailsScreenProps } from './interface';
 import useFetch from '../../hooks/useFetch';
 import Header from '../../components/Header';
-import { IEpisode, IShow } from '../../interface/shows';
+import { IEpisode, ISchedule, IShow } from '../../interface/shows';
 import Poster from '../../components/Poster';
 import Season from '../../components/Season';
+import { humanizeMetaInfo } from '../../utils/transform';
+import Summary from '../../components/Summary';
+import DetailsMainInfo from '../../components/DetailsMainInfo';
 
 const styles = StyleSheet.create({
   mainInfoContainer: {
     alignItems: 'center',
     paddingHorizontal: 20,
+    marginBottom: 16,
   },
   body: {
     paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+  listHeader: {
+    paddingTop: 20,
   },
 });
 
@@ -37,6 +45,13 @@ const ShowDetailsScreen = ({ navigation, route }: TShowDetailsScreenProps) => {
     return showSeasons;
   };
 
+  const handleSchedule = (schedule: ISchedule) => {
+    if (schedule.time && schedule.days) {
+      return `${schedule?.time} on ${humanizeMetaInfo(schedule?.days)}`;
+    }
+    return undefined;
+  };
+
   if (data) {
     const seasons = handleShowSeasons(data._embedded.episodes);
     return (
@@ -45,19 +60,18 @@ const ShowDetailsScreen = ({ navigation, route }: TShowDetailsScreenProps) => {
 
         <FlatList
           ListHeaderComponent={
-            <View>
+            <View style={styles.listHeader}>
               <View style={styles.mainInfoContainer}>
                 <Poster source={data.image?.medium} size='large' />
-                <Text>{data.name}</Text>
-                <Text>{data.genres.map((genre) => genre)}</Text>
-                <Text>{data.rating.average}</Text>
-                <Text>
-                  {data.schedule.time} on{' '}
-                  {data.schedule.days.map((day) => `${day}`)}
-                </Text>
+                <DetailsMainInfo
+                  title={data.name}
+                  subtitle={humanizeMetaInfo(data.genres)}
+                  metaInfo={handleSchedule(data.schedule)}
+                  rating={data.rating?.average}
+                />
               </View>
               <View style={styles.body}>
-                <Text>{data.summary.replace(/(<([^>]+)>)/gi, '')}</Text>
+                <Summary summary={data.summary} />
               </View>
             </View>
           }

@@ -5,18 +5,27 @@ import { IHeader } from './interface';
 
 const styles = StyleSheet.create({
   container: {
+    alignSelf: 'stretch',
+  },
+  content: {
     flexDirection: 'row',
     paddingHorizontal: 20,
-    paddingTop: StatusBar.currentHeight,
-    paddingBottom: 12,
+    paddingVertical: 20,
+  },
+  statusBar: {
+    height: StatusBar.currentHeight,
+    alignSelf: 'stretch',
   },
 });
 
 const Header = ({ onBackPress }: IHeader) => (
   <View style={styles.container}>
-    <TouchableOpacity onPress={onBackPress}>
-      <FontAwesome5 name='chevron-left' size={24} color='black' />
-    </TouchableOpacity>
+    <View style={styles.statusBar} />
+    <View style={styles.content}>
+      <TouchableOpacity onPress={onBackPress}>
+        <FontAwesome5 name='chevron-left' size={24} color='white' />
+      </TouchableOpacity>
+    </View>
   </View>
 );
 
