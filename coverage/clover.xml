@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1635105618825" clover="3.2.0">
-  <project timestamp="1635105618825" name="All files">
-    <metrics statements="146" coveredstatements="137" conditionals="49" coveredconditionals="42" methods="53" coveredmethods="46" elements="248" coveredelements="225" complexity="0" loc="146" ncloc="146" packages="21" files="38" classes="38"/>
+<coverage generated="1635106147686" clover="3.2.0">
+  <project timestamp="1635106147687" name="All files">
+    <metrics statements="142" coveredstatements="137" conditionals="47" coveredconditionals="42" methods="51" coveredmethods="46" elements="240" coveredelements="225" complexity="0" loc="142" ncloc="142" packages="20" files="37" classes="37"/>
     <package name="TVMazeApp">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.tsx" path="/Users/danlaurent/dev/TVMazeApp/App.tsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
       </file>
     </package>
     <package name="TVMazeApp.src.components.Button">
@@ -200,22 +200,12 @@
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="index.tsx" path="/Users/danlaurent/dev/TVMazeApp/src/navigation/ShowNavigator/index.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
       </file>
       <file name="interface.ts" path="/Users/danlaurent/dev/TVMazeApp/src/navigation/ShowNavigator/interface.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="TVMazeApp.src.navigation.TabNavigator">
-      <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="index.tsx" path="/Users/danlaurent/dev/TVMazeApp/src/navigation/TabNavigator/index.tsx">
-        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
       </file>
     </package>
     <package name="TVMazeApp.src.screens.EpisodeDetails">

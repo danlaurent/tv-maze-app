@@ -2,7 +2,6 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../../screens/Home';
 import ShowDetailsScreen from '../../screens/ShowDetails';
-import TabNavigator from '../TabNavigator';
 import EpisodeDetailsScreen from '../../screens/EpisodeDetails';
 import { APP_BACKGROUND_COLOR } from '../../constants/styles/colors';
 
@@ -16,7 +15,7 @@ const ShowNavigator = () => {
         cardStyle: { backgroundColor: APP_BACKGROUND_COLOR },
       }}
     >
-      <Stack.Screen name='Home' component={TabNavigator} />
+      <Stack.Screen name='HomeScreen' component={HomeScreen} />
       <Stack.Screen name='ShowDetailsScreen' component={ShowDetailsScreen} />
       <Stack.Screen
         name='EpisodeDetailsScreen'
