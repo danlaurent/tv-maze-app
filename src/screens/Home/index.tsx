@@ -69,6 +69,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
       >
         <View style={styles.header}>
           <SearchBar
+            testID='HomeScreenSearchBar'
             search={search}
             onChangeText={(value: string) => setSearch(value)}
             placeholder='Show name'
@@ -78,6 +79,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
         </View>
         {searching ? (
           <ShowList
+            testID='HomeScreenSearchList'
             shows={searchData}
             onMoviePress={(showId: number) =>
               navigation.navigate('ShowDetailsScreen', { showId })
@@ -85,6 +87,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
           />
         ) : (
           <ShowList
+            testID='HomeScreenShowList'
             shows={data}
             onMoviePress={(showId: number) =>
               navigation.navigate('ShowDetailsScreen', { showId })
@@ -94,7 +97,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
             }}
           />
         )}
-        {loading ? <Loading /> : null}
+        {loading ? <Loading testID='HomeScreenLoading' /> : null}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#191a2f",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#191a2f",
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginTop": null,
+          "paddingHorizontal": 20,
+          "paddingVertical": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+        testID="HomeScreenSearchBar"
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "marginRight": 12,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#121322",
+                "borderColor": "#0c0d18",
+                "borderRadius": 20,
+                "borderWidth": 1,
+                "flexDirection": "row",
+                "height": 60,
+                "padding": 12,
+              }
+            }
+            testID="HomeScreenSearchBar_searchInput"
+          >
+            <Text />
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="Show name"
+              placeholderTextColor="#6d6f7e"
+              rejectResponderTermination={true}
+              style={
+                Object {
+                  "color": "white",
+                  "marginLeft": 12,
+                }
+              }
+              testID="HomeScreenSearchBar_searchInput_textInput"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 14,
+              "height": 48,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 12,
+            }
+          }
+          testID="HomeScreenSearchBar_button"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#c6c7d2",
+                "fontSize": 14,
+                "textAlign": "center",
+              }
+            }
+          >
+            Search
+          </Text>
+        </View>
+      </View>
+    </View>
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "padding": 20,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "genres": Array [
+              "Drama",
+              "Science-Fiction",
+              "Thriller",
+            ],
+            "id": 1,
+            "name": "testSuccess",
+            "rating": Object {
+              "average": 10,
+            },
+          },
+          Object {
+            "genres": Array [
+              "Drama",
+              "Science-Fiction",
+              "Thriller",
+            ],
+            "id": 2,
+            "name": "testSuccess2",
+            "rating": Object {
+              "average": 10,
+            },
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.9}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      testID="HomeScreenShowList"
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "paddingVertical": 8,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "opacity": 1,
+                }
+              }
+              testID="HomeScreenShowList_1"
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 4,
+                    "height": 147,
+                    "marginRight": 12,
+                    "width": 105,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#131425",
+                      "borderRadius": 4,
+                      "flex": 1,
+                      "justifyContent": "center",
+                    }
+                  }
+                  testID="undefined_imagePlaceholder"
+                >
+                  <Text />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 24,
+                      "fontWeight": "700",
+                      "marginBottom": 8,
+                      "marginTop": 16,
+                    }
+                  }
+                >
+                  testSuccess
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#6d6f7e",
+                      "marginBottom": 8,
+                      "textAlign": "center",
+                    }
+                  }
+                  testID="HomeScreenShowList_1_detailsMainInfo_subtitle"
+                >
+                  Drama | Science-Fiction | Thriller
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text />
+                  <Text
+                    style={
+                      Object {
+                        "color": "#c6c7d2",
+                        "fontSize": 16,
+                        "fontWeight": "700",
+                        "marginLeft": 8,
+                      }
+                    }
+                    testID="HomeScreenShowList_1_detailsMainInfo_rating"
+                  >
+                    10
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "paddingVertical": 8,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "opacity": 1,
+                }
+              }
+              testID="HomeScreenShowList_2"
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 4,
+                    "height": 147,
+                    "marginRight": 12,
+                    "width": 105,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#131425",
+                      "borderRadius": 4,
+                      "flex": 1,
+                      "justifyContent": "center",
+                    }
+                  }
+                  testID="undefined_imagePlaceholder"
+                >
+                  <Text />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 24,
+                      "fontWeight": "700",
+                      "marginBottom": 8,
+                      "marginTop": 16,
+                    }
+                  }
+                >
+                  testSuccess2
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#6d6f7e",
+                      "marginBottom": 8,
+                      "textAlign": "center",
+                    }
+                  }
+                  testID="HomeScreenShowList_2_detailsMainInfo_subtitle"
+                >
+                  Drama | Science-Fiction | Thriller
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text />
+                  <Text
+                    style={
+                      Object {
+                        "color": "#c6c7d2",
+                        "fontSize": 16,
+                        "fontWeight": "700",
+                        "marginLeft": 8,
+                      }
+                    }
+                    testID="HomeScreenShowList_2_detailsMainInfo_rating"
+                  >
+                    10
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginBottom": 32,
+        }
+      }
+      testID="HomeScreenLoading"
+    >
+      <ActivityIndicator
+        animating={true}
+        color="white"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
