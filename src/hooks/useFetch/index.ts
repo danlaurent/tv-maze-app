@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { fetchService } from '../../utils/fetch';
 import { getUrlWithOptions } from '../../utils/url';
 
-const useFetch = <T>(url: string, options?: any) => {
+export const useFetch = <T>(url: string, options?: any) => {
   const [page, setPage] = useState<number>(0);
   const [shouldFetch, setShouldFetch] = useState<boolean>(true);
   const [data, setData] = useState<T | null>(null);
@@ -56,5 +56,3 @@ const useFetch = <T>(url: string, options?: any) => {
 
   return { data, loading, error, loadMore, page };
 };
-
-export default useFetch;

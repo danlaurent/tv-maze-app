@@ -11,7 +11,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { TSearchedShowList, TShowList } from '../../interface/shows';
-import useFetch from '../../hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 import SearchBar from '../../components/SearchBar';
 import { fetchService } from '../../utils/fetch';
 import ShowList from '../../components/ShowList';

@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const Loading = () => (
-  <View style={styles.container}>
+const Loading = ({ testID }: { testID?: string }) => (
+  <View testID={testID} style={styles.container}>
     <ActivityIndicator size='large' color='white' />
   </View>
 );

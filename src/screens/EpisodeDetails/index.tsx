@@ -26,7 +26,10 @@ const EpisodeDetailsScreen = ({
   } = route;
   return (
     <View style={{ flex: 1 }}>
-      <Header onBackPress={() => navigation.goBack()} />
+      <Header
+        testID='EpisodeDetailsHeader'
+        onBackPress={() => navigation.goBack()}
+      />
       <ScrollView>
         <View style={styles.mainInfoContainer}>
           <Image
@@ -37,7 +40,7 @@ const EpisodeDetailsScreen = ({
             <DetailsMainInfo
               title={episode.name}
               subtitle={`Season ${episode.season} | Episode ${episode.number}`}
-              rating={episode.rating.average}
+              rating={episode.rating?.average}
             />
           </View>
         </View>

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Summary = ({ summary, testID }: ISummary) => (
+const Summary = ({ summary = '', testID }: ISummary) => (
   <Text testID={testID} style={styles.summary}>
     {cleanSummary(summary)}
   </Text>

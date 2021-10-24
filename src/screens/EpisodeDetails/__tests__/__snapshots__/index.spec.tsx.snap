@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodeDetailsScreen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+      }
+    }
+    testID="EpisodeDetailsHeader"
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "height": null,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingHorizontal": 20,
+          "paddingVertical": 20,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="EpisodeDetailsHeader_backButton"
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "paddingHorizontal": 20,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "aspectRatio": 1.5,
+              "width": 750,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "padding": 20,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 24,
+                  "fontWeight": "700",
+                  "marginBottom": 8,
+                  "marginTop": 16,
+                }
+              }
+            >
+              test
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#6d6f7e",
+                  "marginBottom": 8,
+                  "textAlign": "center",
+                }
+              }
+              testID="undefined_subtitle"
+            >
+              Season 1 | Episode 1
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text />
+              <Text
+                style={
+                  Object {
+                    "color": "#c6c7d2",
+                    "fontSize": 16,
+                    "fontWeight": "700",
+                    "marginLeft": 8,
+                  }
+                }
+                testID="undefined_rating"
+              >
+                10
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "padding": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#6d6f7e",
+              "textAlign": "center",
+            }
+          }
+        >
+          A test episode
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

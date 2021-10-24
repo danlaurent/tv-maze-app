@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import useFetch from '..';
+import { useFetch } from '..';
 
 const mockSuccessResponse = [
   {
