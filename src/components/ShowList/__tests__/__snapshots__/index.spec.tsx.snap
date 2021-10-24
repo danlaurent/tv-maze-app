@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowList renders correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "padding": 20,
+    }
+  }
+  data={
+    Array [
+      Object {
+        "genres": Array [
+          "Test",
+        ],
+        "id": 1,
+        "image": Object {
+          "medium": "https://via.placeholder.com/150",
+        },
+        "name": "Test Movie",
+        "rating": Object {
+          "average": 8,
+        },
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={0.9}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "paddingVertical": 8,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flexDirection": "row",
+              "opacity": 1,
+            }
+          }
+          testID="undefined_1"
+        >
+          <View
+            style={
+              Object {
+                "borderRadius": 4,
+                "height": 147,
+                "marginRight": 12,
+                "width": 105,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://via.placeholder.com/150",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 4,
+                  "height": 147,
+                  "width": 105,
+                }
+              }
+              testID="undefined_image"
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 24,
+                  "fontWeight": "700",
+                  "marginBottom": 8,
+                  "marginTop": 16,
+                }
+              }
+            >
+              Test Movie
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#6d6f7e",
+                  "marginBottom": 8,
+                  "textAlign": "center",
+                }
+              }
+              testID="undefined_1_detailsMainInfo_subtitle"
+            >
+              Test
+            </Text>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text />
+              <Text
+                style={
+                  Object {
+                    "color": "#c6c7d2",
+                    "fontSize": 16,
+                    "fontWeight": "700",
+                    "marginLeft": 8,
+                  }
+                }
+                testID="undefined_1_detailsMainInfo_rating"
+              >
+                8
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

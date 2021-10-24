@@ -4,4 +4,5 @@ export interface ISearchBar {
   placeholder: string;
   buttonText: string;
   onButtonPress: () => void;
+  testID?: string;
 }

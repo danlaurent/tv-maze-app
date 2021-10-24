@@ -45,19 +45,26 @@ const styles = StyleSheet.create({
   },
 });
 
-const Season = ({ season, onEpisodePress = () => {} }: ISeason) => (
-  <View>
-    <View style={styles.header}>
-      <Text style={styles.headerText}>Season {season.season}</Text>
+const Season = ({ season, onEpisodePress = () => {}, testID }: ISeason) => (
+  <View testID={testID}>
+    <View testID={`${testID}_header`} style={styles.header}>
+      <Text testID={`${testID}_headerText`} style={styles.headerText}>
+        Season {season.season}
+      </Text>
     </View>
     <View style={styles.episodesContainer}>
       {season.episodes.map((episode) => (
         <TouchableOpacity
+          testID={`${testID}_episodeButton_${episode.id}`}
           style={styles.episode}
           key={episode.id}
           onPress={() => onEpisodePress(episode)}
         >
-          <Text style={styles.episodeText} numberOfLines={1}>
+          <Text
+            testID={`${testID}_episodeText_${episode.id}`}
+            style={styles.episodeText}
+            numberOfLines={1}
+          >
             {episode.number} - {episode.name}
           </Text>
           <FontAwesome5 name='chevron-right' size={20} color={GRAY} />

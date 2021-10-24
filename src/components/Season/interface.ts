@@ -6,4 +6,5 @@ export interface ISeason {
     episodes: IEpisode[];
   };
   onEpisodePress?: (episode: IEpisode) => void;
+  testID?: string;
 }

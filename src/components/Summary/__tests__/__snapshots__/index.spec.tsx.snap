@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary renders correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#6d6f7e",
+      "textAlign": "center",
+    }
+  }
+  testID="testSummary"
+>
+  A test summary
+</Text>
+`;

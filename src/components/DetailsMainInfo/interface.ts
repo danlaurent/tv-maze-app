@@ -6,4 +6,5 @@ export interface IDetailsMainInfo {
   metaInfo?: string;
   rating?: number;
   align?: FlexAlignType;
+  testID?: string;
 }

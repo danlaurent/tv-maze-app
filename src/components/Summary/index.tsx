@@ -11,8 +11,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Summary = ({ summary }: ISummary) => (
-  <Text style={styles.summary}>{cleanSummary(summary)}</Text>
+const Summary = ({ summary, testID }: ISummary) => (
+  <Text testID={testID} style={styles.summary}>
+    {cleanSummary(summary)}
+  </Text>
 );
 
 export default Summary;

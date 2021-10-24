@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poster renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 4,
+      "height": 147,
+      "width": 105,
+    }
+  }
+  testID="testPoster"
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://via.placeholder.com/300",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 4,
+        "height": 147,
+        "width": 105,
+      }
+    }
+    testID="testPoster_image"
+  />
+</View>
+`;

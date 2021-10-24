@@ -35,12 +35,19 @@ const styles = StyleSheet.create({
   },
 });
 
-const Poster = ({ source, size = 'small', style }: IPoster) => (
-  <View style={StyleSheet.flatten([styles[size], style])}>
+const Poster = ({ source, size = 'small', style, testID }: IPoster) => (
+  <View testID={testID} style={StyleSheet.flatten([styles[size], style])}>
     {source ? (
-      <Image source={{ uri: source }} style={styles[size]} />
+      <Image
+        testID={`${testID}_image`}
+        source={{ uri: source }}
+        style={styles[size]}
+      />
     ) : (
-      <View style={styles.posterPlaceholder}>
+      <View
+        testID={`${testID}_imagePlaceholder`}
+        style={styles.posterPlaceholder}
+      >
         <MaterialIcons
           name='image-not-supported'
           size={60}

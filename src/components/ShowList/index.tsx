@@ -9,15 +9,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const ShowList = ({ shows, onEndReached, onMoviePress }: IShowList) => {
+const ShowList = ({ shows, onEndReached, onMoviePress, testID }: IShowList) => {
   if (shows && shows.length > 0) {
     return (
       <FlatList
+        testID={testID}
         data={shows}
         renderItem={({ item }) => {
           return (
             <View style={styles.itemContainer}>
-              <ShowListItem show={item} onPress={onMoviePress} />
+              <ShowListItem
+                show={item}
+                onPress={onMoviePress}
+                testID={`${testID}_${item.id}`}
+              />
             </View>
           );
         }}

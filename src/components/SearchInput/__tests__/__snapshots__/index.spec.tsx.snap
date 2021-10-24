@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#121322",
+      "borderColor": "#0c0d18",
+      "borderRadius": 20,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 60,
+      "padding": 12,
+    }
+  }
+  testID="testSearchInput"
+>
+  <Text />
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Test Placeholder"
+    placeholderTextColor="#6d6f7e"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "color": "white",
+        "marginLeft": 12,
+      }
+    }
+    testID="testSearchInput_textInput"
+    underlineColorAndroid="transparent"
+    value="Test Text"
+  />
+</View>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Season renders correctly 1`] = `
+<View
+  testID="testSeason"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#121322",
+        "borderBottomWidth": 1,
+        "borderColor": "#0c0d18",
+        "borderTopWidth": 1,
+        "height": 56,
+        "justifyContent": "center",
+        "paddingHorizontal": 12,
+        "paddingVertical": 4,
+      }
+    }
+    testID="testSeason_header"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#c6c7d2",
+          "fontSize": 16,
+          "fontWeight": "700",
+        }
+      }
+      testID="testSeason_headerText"
+    >
+      Season 
+      1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#0c0d18",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#121322",
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 4,
+        }
+      }
+      testID="testSeason_episodeButton_1"
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#6d6f7e",
+            "fontSize": 16,
+            "fontWeight": "700",
+          }
+        }
+        testID="testSeason_episodeText_1"
+      >
+        1
+         - 
+        Test Episode
+      </Text>
+      <Text />
+    </View>
+  </View>
+</View>
+`;

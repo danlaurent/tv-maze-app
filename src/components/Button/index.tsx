@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const Button = ({ text, onPress }: IButton) => (
-  <TouchableOpacity style={styles.button} onPress={onPress}>
+const Button = ({ text, onPress, testID }: IButton) => (
+  <TouchableOpacity testID={testID} style={styles.button} onPress={onPress}>
     <Text style={styles.text}>{text}</Text>
   </TouchableOpacity>
 );

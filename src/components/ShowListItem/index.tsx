@@ -16,11 +16,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const ShowListItem = ({ show, onPress = () => {} }: IShowListItem) => {
+const ShowListItem = ({ show, onPress = () => {}, testID }: IShowListItem) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={() => onPress(show.id)}>
+    <TouchableOpacity
+      testID={testID}
+      style={styles.container}
+      onPress={() => onPress(show.id)}
+    >
       <Poster source={show.image?.medium} size='small' style={styles.poster} />
       <DetailsMainInfo
+        testID={`${testID}_detailsMainInfo`}
         title={show.name}
         subtitle={humanizeMetaInfo(show.genres)}
         rating={show.rating.average}

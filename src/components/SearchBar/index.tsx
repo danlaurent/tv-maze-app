@@ -23,16 +23,22 @@ const SearchBar = ({
   placeholder,
   buttonText,
   onButtonPress,
+  testID,
 }: ISearchBar) => (
-  <View style={styles.container}>
+  <View testID={testID} style={styles.container}>
     <View style={styles.inputContainer}>
       <SearchInput
         value={search}
         onChangeText={onChangeText}
         placeholder={placeholder}
+        testID={`${testID}_searchInput`}
       />
     </View>
-    <Button text={buttonText} onPress={onButtonPress} />
+    <Button
+      testID={`${testID}_button`}
+      text={buttonText}
+      onPress={onButtonPress}
+    />
   </View>
 );
 

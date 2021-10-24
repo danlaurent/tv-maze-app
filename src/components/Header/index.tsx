@@ -18,11 +18,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Header = ({ onBackPress }: IHeader) => (
-  <View style={styles.container}>
+const Header = ({ onBackPress, testID }: IHeader) => (
+  <View testID={testID} style={styles.container}>
     <View style={styles.statusBar} />
     <View style={styles.content}>
-      <TouchableOpacity onPress={onBackPress}>
+      <TouchableOpacity testID={`${testID}_backButton`} onPress={onBackPress}>
         <FontAwesome5 name='chevron-left' size={24} color='white' />
       </TouchableOpacity>
     </View>

@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import MovieListItem from '..';
+import { render, fireEvent, RenderAPI } from '@testing-library/react-native';
+import ShowListItem from '..';
 
 const showMock: any = {
   name: 'Test Movie',
@@ -13,9 +13,35 @@ const showMock: any = {
   genres: ['Test'],
 };
 
+const onPressMock = jest.fn();
+
 describe('ShowListitem', () => {
+  let tree: RenderAPI;
+  beforeEach(() => {
+    tree = render(
+      <ShowListItem
+        testID='testShowListItem'
+        show={showMock}
+        onPress={() => onPressMock()}
+      />
+    );
+  });
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('renders correctly', () => {
-    const tree = renderer.create(<MovieListItem show={showMock} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const snapshot = tree.toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
+
+  describe('When the ShowListItem is pressed', () => {
+    beforeEach(async () => {
+      await fireEvent.press(tree.getByTestId('testShowListItem'));
+    });
+
+    it('fires the onPress action', () => {
+      expect(onPressMock).toBeCalledTimes(1);
+    });
   });
 });

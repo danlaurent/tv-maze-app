@@ -26,10 +26,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const SearchInput = ({ value, onChangeText, placeholder }: ISearchInput) => (
-  <View style={styles.inputContainer}>
+const SearchInput = ({
+  value,
+  onChangeText,
+  placeholder,
+  testID,
+}: ISearchInput) => (
+  <View testID={testID} style={styles.inputContainer}>
     <FontAwesome5 name='search' size={24} color={LIGHT_GRAY} />
     <TextInput
+      testID={`${testID}_textInput`}
       style={styles.input}
       onChangeText={onChangeText}
       value={value}
