@@ -22,26 +22,30 @@ const useFetch = <T>(url: string, options?: any) => {
         url,
         options?.paginate ? { page } : null
       );
-      const newData: T = await fetchService<T>(urlWithOptions);
+      try {
+        const newData: T = await fetchService<T>(urlWithOptions);
 
-      setShouldFetch(false);
+        setShouldFetch(false);
 
-      if (options?.paginate) {
-        setData((oldData: T | null): T => {
-          if (oldData) {
-            return <T>(
-              (<unknown>[
-                ...(oldData as unknown as T[]),
-                ...(newData as unknown as T[]),
-              ])
-            );
-          }
-          return newData;
-        });
+        if (options?.paginate) {
+          setData((oldData: T | null): T => {
+            if (oldData) {
+              return <T>(
+                (<unknown>[
+                  ...(oldData as unknown as T[]),
+                  ...(newData as unknown as T[]),
+                ])
+              );
+            }
+            return newData;
+          });
 
-        setPage(page + 1);
-      } else {
-        setData(newData);
+          setPage(page + 1);
+        } else {
+          setData(newData);
+        }
+      } catch (error: unknown) {
+        setError(error as Error);
       }
 
       setLoading(false);
@@ -50,7 +54,7 @@ const useFetch = <T>(url: string, options?: any) => {
     fetchData();
   }, [page, shouldFetch]);
 
-  return { data, loading, error, loadMore };
+  return { data, loading, error, loadMore, page };
 };
 
 export default useFetch;
