@@ -8,6 +8,7 @@ import {
   Platform,
   StatusBar,
   SafeAreaView,
+  ActivityIndicator,
 } from 'react-native';
 import { TSearchedShowList, TShowList } from '../../interface/shows';
 import useFetch from '../../hooks/useFetch';
@@ -17,6 +18,7 @@ import ShowList from '../../components/ShowList';
 import { THomeScreenProps } from './interface';
 import { handleSearchResults } from '../../utils/search';
 import { APP_BACKGROUND_COLOR } from '../../constants/styles/colors';
+import Loading from '../../components/Loading';
 
 const styles = StyleSheet.create({
   container: {
@@ -50,6 +52,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
   const onSearchPress = () => {
     if (searching) {
       setSearchData([]);
+      setSearch('');
     } else {
       searchShows();
     }
@@ -91,8 +94,7 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
             }}
           />
         )}
-
-        {loading ? <Text>Loading...</Text> : null}
+        {loading ? <Loading /> : null}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
