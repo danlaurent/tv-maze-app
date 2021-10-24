@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet, View, SafeAreaView } from 'react-native';
+import { TextInput, StyleSheet, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { ISearchInput } from './interface';
 import {

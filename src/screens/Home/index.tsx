@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StyleSheet,
   View,
-  FlatList,
-  Text,
   KeyboardAvoidingView,
   Platform,
   StatusBar,
   SafeAreaView,
-  ActivityIndicator,
 } from 'react-native';
 import { TSearchedShowList, TShowList } from '../../interface/shows';
 import { useFetch } from '../../hooks/useFetch';
@@ -49,17 +46,25 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
     setSearchData(shows);
   };
 
-  const onSearchPress = () => {
-    if (searching) {
+  useEffect(() => {
+    if (search) {
+      const debounceSearch = setTimeout(() => {
+        setSearching(true);
+        searchShows();
+      }, 1000);
+      return () => clearTimeout(debounceSearch);
+    } else {
       setSearchData([]);
       setSearch('');
-    } else {
-      searchShows();
+      setSearching(false);
     }
-    setSearching(!searching);
-  };
+  }, [search]);
 
-  const buttonText = searching ? 'Cancel' : 'Search';
+  const onClearPress = () => {
+    setSearchData([]);
+    setSearch('');
+    setSearching(false);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -73,8 +78,9 @@ const HomeScreen = ({ navigation }: THomeScreenProps) => {
             search={search}
             onChangeText={(value: string) => setSearch(value)}
             placeholder='Show name'
-            buttonText={buttonText}
-            onButtonPress={onSearchPress}
+            buttonText='Clear'
+            onButtonPress={onClearPress}
+            showButton={searching}
           />
         </View>
         {searching ? (

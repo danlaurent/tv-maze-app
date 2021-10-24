@@ -5,4 +5,5 @@ export interface ISearchBar {
   buttonText: string;
   onButtonPress: () => void;
   testID?: string;
+  showButton?: boolean;
 }

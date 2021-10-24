@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
-import { IShow } from '../../interface/shows';
 import { IShowListItem } from './interface';
 import Poster from '../Poster';
 import DetailsMainInfo from '../DetailsMainInfo';

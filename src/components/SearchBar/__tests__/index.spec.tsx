@@ -17,6 +17,7 @@ describe('SearchBar', () => {
         onButtonPress={() => onButtonPressMock()}
         buttonText='Search'
         testID='testSearchBar'
+        showButton
       />
     );
   });

@@ -4,6 +4,7 @@ import {
   RenderAPI,
   fireEvent,
   act,
+  waitFor,
 } from '@testing-library/react-native';
 import HomeScreen from '..';
 import * as fetchUtils from '../../../utils/fetch';
@@ -91,35 +92,35 @@ describe('HomeScreen', () => {
         );
       });
     });
+
     it('changes the input text', () => {
       const searchInputProps = tree.getByTestId(
         'HomeScreenSearchBar_searchInput_textInput'
       ).props;
       expect(searchInputProps.value).toBe('Test');
     });
-  });
 
-  describe('When search is pressed', () => {
-    beforeEach(async () => {
+    it('searches the show', async () => {
       mockFetchService();
-      await act(async () => {
-        await fireEvent.press(tree.getByTestId('HomeScreenSearchBar_button'));
-      });
-    });
-    it('searches for the show', () => {
-      expect(fetchUtils.fetchService).toBeCalled();
-    });
-
-    it('shows the search results list', () => {
-      expect(tree.getByTestId('HomeScreenSearchList')).toBeDefined();
+      await waitFor(
+        () => {
+          expect(fetchUtils.fetchService).toBeCalled();
+        },
+        { timeout: 1100 }
+      );
     });
 
-    describe('When a searched show is pressed', () => {
+    describe('When the searched show is pressed', () => {
       beforeEach(async () => {
-        await fireEvent.press(tree.getByTestId('HomeScreenSearchList_1'));
+        await waitFor(
+          async () => {
+            await fireEvent.press(tree.getByTestId('HomeScreenSearchList_1'));
+          },
+          { timeout: 1100 }
+        );
       });
 
-      it('navigates to the ShowDetails screen', () => {
+      it('navigates to ShowDetails screen', () => {
         expect(navigationMock.navigate).toHaveBeenCalledWith(
           'ShowDetailsScreen',
           { showId: 1 }
@@ -127,11 +128,18 @@ describe('HomeScreen', () => {
       });
     });
 
-    describe('When the cancel button is pressed', () => {
-      it('clears the search field', async () => {
-        await act(async () => {
-          await fireEvent.press(tree.getByTestId('HomeScreenSearchBar_button'));
-        });
+    describe('When the clear button is pressed', () => {
+      beforeEach(async () => {
+        await waitFor(
+          async () => {
+            await fireEvent.press(
+              tree.getByTestId('HomeScreenSearchBar_button')
+            );
+          },
+          { timeout: 1100 }
+        );
+      });
+      it('clears the input text', () => {
         const searchInputProps = tree.getByTestId(
           'HomeScreenSearchBar_searchInput_textInput'
         ).props;

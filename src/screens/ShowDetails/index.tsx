@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-  SafeAreaView,
-} from 'react-native';
+import { View, StyleSheet, FlatList, SafeAreaView } from 'react-native';
 import { TShowDetailsScreenProps } from './interface';
 import { useFetch } from '../../hooks/useFetch';
 import Header from '../../components/Header';
